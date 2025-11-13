@@ -123,7 +123,7 @@ make_bed = function(bamfile, bedfile, mnpfile, force) {
 	printf("Running modkit pileup on \x1b[1m%s\x1b[0m\n to create \x1b[1m%s\x1b[0m\n\n", bamfile, bedfile)
 	printf("Starting modkit pileup. This may take a while.\n")
 	tic("Modkit")
-	run("modkit", args=c("pileup", "--cpg", "--ignore", "h", "-t", args$threads, bamfile, bedfile))
+	run("modkit", args=c("pileup", "--ignore", "h", "-t", args$threads, bamfile, bedfile))
 	toc()
 	printf("BED: Modkit done.\n")
 	
