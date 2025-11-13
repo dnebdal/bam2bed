@@ -46,7 +46,9 @@ The `:z`suffixes set up the correct SELinux permissions for Fedora, but may not 
 
 ## Options
 ### General
-The general syntax is `bam2bed merge|bed|mnpflex --name <id> [--tag <tag>] [--threads N] [--only] [--force] [other options]`
+The general syntax is 
+`bam2bed merge|bed|mnpflex --name <id> [--tag <tag>] [--threads N] [--only] [--force] [other options]`
+
 The first option is the _verb_, which says where in the merge → bed → mnpflex pipeline to stop.
 
 - `--name`    Sample name to use in the directory and file names
@@ -69,7 +71,7 @@ Takes no settings at the moment. An option to retain 5hmC information may appear
 
 ### MNP Flex
 `bam2bed mnpflex --username <user> --password <password>`
-Upload the bed file from the previous stage to (MNP Flex)[https://mnp-flex.org], and download the PDF report. This obviously requires a working internet connection.
+Upload the bed file from the previous stage to [MNP Flex](https://mnp-flex.org), and download the PDF report. This obviously requires a working internet connection.
 
 - `--username`  Your MNP Flex username
 - `--password`  Your MNP Flex password
