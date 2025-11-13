@@ -78,5 +78,16 @@ Upload the bed file from the previous stage to [MNP Flex](https://mnp-flex.org),
 - `--username`  Your MNP Flex username
 - `--password`  Your MNP Flex password
 
+## Example
+Merge the first 1000 BAM files and upload to MNP Flex, using 16 threads. 
+```
+podman run --rm \
+  -v/data/sample1:/work/in:z \
+  -v/data/output:/work/out:z \
+  bam2bed mnpflex --name sample1 --tag 1000bam --Nbam 1000 \
+  --threads 16 --username usr1000 --password abcdefghi 
+```
+
+This will save its output files in subfolders inside `/data/output/sample1_1000bam/` .
 
 
