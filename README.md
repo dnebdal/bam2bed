@@ -62,6 +62,7 @@ use `bam2bed bed --force --only`, while specifying only `--force` will do both s
 
 ### Merge
 `bam2bed merge [general options] [--Nbam N]`
+
 - `--Nbam` How many BAM files to merge. Default 8000.
 
 The BAM files are picked in order of "what does Sys.glob() return". If there are  `bam_passed` folders in both the in folder and subdirectories, the former is first in the list.
@@ -71,6 +72,7 @@ Takes no settings at the moment. An option to retain 5hmC information may appear
 
 ### MNP Flex
 `bam2bed mnpflex --username <user> --password <password>`
+
 Upload the bed file from the previous stage to [MNP Flex](https://mnp-flex.org), and download the PDF report. This obviously requires a working internet connection.
 
 - `--username`  Your MNP Flex username
