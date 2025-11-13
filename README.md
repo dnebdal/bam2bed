@@ -71,6 +71,8 @@ Takes no settings at the moment. An option to retain 5hmC information may appear
 `bam2bed mnpflex --username <user> --password <password>`
 Upload the bed file from the previous stage to (MNP Flex)[https://mnp-flex.org], and download the PDF report. This obviously requires a working internet connection.
 
-`--username`  Your MNP Flex username
-`--password`  Your MNP Flex password
+- `--username`  Your MNP Flex username
+- `--password`  Your MNP Flex password
+
+
 
