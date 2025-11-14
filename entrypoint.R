@@ -101,6 +101,7 @@ merge_bam = function(Nbam, outfile, force, tag) {
 	printf("Scanning for BAM files in in/*/bam_pass/ and in/bam_pass/ :\n")
 	bamfiles = Sys.glob("/work/in/bam_pass/*.[bB][aA][mM]")
 	bamfiles = c(bamfiles, Sys.glob("/work/in/*/bam_pass/*.[bB][aA][mM]"))
+	bamfiles = sort(bamfiles)
 	printf("Found %d BAM files\n", length(bamfiles))
 	bamfiles = bamfiles[1:min(Nbam, length(bamfiles))]
 	
