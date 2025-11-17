@@ -103,8 +103,12 @@ merge_bam = function(Nbam, outfile, force, tag) {
 	bamfiles = c(bamfiles, Sys.glob("/work/in/*/bam_pass/*.[bB][aA][mM]"))
 	bamfiles = sort(bamfiles)
 	printf("Found %d BAM files\n", length(bamfiles))
+
+	stats = data.frame(Found=length(bamfiles), Requested=Nbam, Used=min(Nbam, length(bamfiles)))
+	write.table(stats, paste0(outfile, "_stats.tsv"), row.names=F, col.names=T)
+
 	bamfiles = bamfiles[1:min(Nbam, length(bamfiles))]
-	
+		
 	args = c("merge", "-l", "4", sprintf("-@%d", args$threads), 
 	         "--write-index", "--verbosity", "255", "-o", outfile)
 	if(force) args=c(args, "-f")
